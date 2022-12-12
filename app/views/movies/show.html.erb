@@ -1,0 +1,19 @@
+<div class="col-lg-8 mt-3">
+   <div class="card shadow mb-3 mt-2">
+       <div class="card-body">
+          <h5 class="card-title">Title: <%= @movie.title %></h5>
+          <div class="row mt-3">
+            <div class="col-lg-7">
+              <h5>Category: <span class="badge bg-primary"><%= @movie.category%></span></h5>
+            </div>
+            <div class="col-lg-5">
+             <p class="lead">Description: <%=@movie.description%></p>
+            </div>
+          </div>
+          <%= link_to 'Back to Movies', movies_path, class: "btn btn-outline-danger mt-3"%>
+       </div>
+    </div>
+</div>
+
+<div class="col-lg-4 mt-3">
+</div>

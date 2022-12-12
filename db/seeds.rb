@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "Movies are being created"
+
+movies = Movie.create([
+    {
+        title: "Troll",
+        description: "Best Movie Ever",
+        category: "Action"
+    },
+    {
+        title: "Troll",
+        description: "Best Movie Ever",
+        category: "Action"
+    },
+    {
+        title: "Ramayana",
+        description: "The Legend of Prince Rama (1993) 8.5",
+        category: "Romantic"
+    },
+    {
+        title: "Once Upon a Time",
+        description: "Once Upon a Time in America 1984",
+        category: "Action"
+    }
+])
+
+
+
+
+
+puts "Movies created"

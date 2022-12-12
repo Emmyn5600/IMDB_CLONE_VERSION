@@ -72,3 +72,4 @@ group :test do
 end
 
 gem 'cssbundling-rails'
+gem 'friendly_id', '~> 5.4.0'

@@ -74,3 +74,6 @@ end
 gem 'cssbundling-rails'
 gem 'friendly_id', '~> 5.4.0'
 gem 'devise'
+gem 'kaminari'
+gem 'bootstrap5-kaminari-views'
+gem 'ransack'

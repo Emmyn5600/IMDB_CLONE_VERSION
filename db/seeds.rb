@@ -28,6 +28,11 @@ movies = Movie.create([
         title: "Once Upon a Time",
         description: "Once Upon a Time in America 1984",
         category: "Action"
+    },
+    {
+        title: "The Loft",
+        description: "Once upon a time in loft 1984",
+        category: "Cool"
     }
 ])
 

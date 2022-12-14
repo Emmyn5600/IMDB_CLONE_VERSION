@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @movies = Movie.all.page(params[:page])
+    @q =  Movie.ransack(params[:q])
+    @movies = @q.result(distinct: true).page(params[:page])
   end
 end

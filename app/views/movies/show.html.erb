@@ -12,7 +12,15 @@
                 </div>
                 <div class="col-lg-5">
                     <p class="lead">Description:
-                        <%=@movie.description%></p>
+                        <%=@movie.description%>
+                    </p>
+                </div>
+
+                <div class=" col-md-4">
+                    <%= render @movie.reviews %>
+                    <div>
+                        <%= link_to "Add Review", new_movie_review_path(@movie), class: "btn btn-outline-success"%>
+                    </div>
                 </div>
             </div>
             <%= link_to 'Back to Movies', root_path, class: "btn btn-outline-danger mt-3"%>

@@ -6,6 +6,7 @@ class Movie < ApplicationRecord
     friendly_id :title, use: :slugged
 
     belongs_to :category
+    has_many :reviews
 
     after_commit :add_default_image, on: %i[create update]
 

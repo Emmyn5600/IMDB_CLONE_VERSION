@@ -77,5 +77,4 @@ gem 'devise'
 gem 'kaminari'
 gem 'bootstrap5-kaminari-views'
 gem 'ransack'
-
-gem "jsbundling-rails", "~> 1.1"
+gem 'simple_form'

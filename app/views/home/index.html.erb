@@ -1,6 +1,6 @@
-<div class="col-lg-12">
+<div class="mt-5 col-lg-12">
     <%= search_form_for @q, url: :root do |form| %>
-        <div class="d-flex ml-2 form-group ">
+        <div class="p-5 d-flex ml-2 form-group ">
             <div class="col-lg-3">
                 <%= form.label :search_by_title %>
                 <%= form.search_field :title_cont, class: "form-control" %>
@@ -9,10 +9,11 @@
                 <%= form.label :search_by_category %>
                 <%= form.search_field :category_cont, class: "form-control" %>
             </div>
+            <div class="form-group mt-4">
+                <%= form.submit class: "btn btn-primary" %>
+            </div>
         </div>
-        <div class="form-group mt-3">
-            <%= form.submit class: "btn btn-primary" %>
-        </div>
+
         <%end%>
         <%= render 'shared/movies', movies: @movies, section_title: 'IMDB Movies'%>
         <%= paginate @movies, theme: 'bootstrap-5'%>

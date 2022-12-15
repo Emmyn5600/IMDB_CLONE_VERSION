@@ -5,6 +5,8 @@ class Movie < ApplicationRecord
     extend FriendlyId
     friendly_id :title, use: :slugged
 
+    belongs_to :category
+
     after_commit :add_default_image, on: %i[create update]
 
     def image_header_variant

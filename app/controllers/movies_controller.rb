@@ -2,11 +2,20 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: %i[show edit update destroy]
 
     def index
-      @movies = Movie.all
+        if params[:category].blank?
+           @movies = Movie.all
+         else
+           @category_id = Category.find_by(name: params[:category]).id
+           @movies = Movie.where(:category_id => @category_id).order("created_at DESC ")
+        end
     end
 
     def show
      set_movie
+    end
+
+    def new
+      @categories = Category.all.map {|c|[c.name, c.id]}
     end
 
     private

@@ -1,19 +1,33 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+<script>
+    $('.dropdown-toggle').dropdown()
+</script>
+<nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <%= link_to "IMDB CLONE", root_path, class: "navbar-brand" %>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <%= link_to "Movie_Review", root_path, class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Today's Movie</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categories
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Category
                     </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <% Category.all.each do |category| %>
+                            <li class="<%= 'active' if params[:category] == category.name %>">
+                                <%= link_to category.name, movies_path(category: category.name), class: "link" %>
+                            </li>
+                        <% end %>
+                    </ul>
                 </li>
-                <form>
-                    <%= render 'shared/auth' %>
-                </form>
+            </ul>
+            <div class="d-flex" role="button">
+                <%= render 'shared/auth' %>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>

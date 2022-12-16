@@ -2,7 +2,7 @@
     <ul class="navbar-nav">
         <%if current_user.role == "admin"  %>
             <div class="">
-                <%= link_to "Add Video", root_path, class: "btn btn-primary"%>
+                <%= link_to "Manage the Movies", new_movie_path, class: "btn btn-primary"%>
             </div>
             <%end%>
             <li class="nav-item dropdown">

@@ -15,19 +15,47 @@ class MoviesController < ApplicationController
     end
 
     def new
+      @movie = Movie.new
+      @categories = Category.all.map {|c|[c.name, c.id]}
+    end
+   
+    def create
+      @movie = Movie.new(movie_params)
+      @movie.category_id = params[:category_id]
+      
+      if @movie.save
+        redirect_to root_path, notice: 'movie has been created successfully'
+      else
+        render :new
+      end
+    end
+
+    def edit
       @categories = Category.all.map {|c|[c.name, c.id]}
     end
 
+    def update
+      @movie.category_id = params[:category_id]
+      if @movie.update(movie_params)
+       redirect_to movie_path(@movie)
+      else
+        render 'edit'
+      end
+    end
+
+    def destroy
+      @movie.destroy
+      redirect_to root_path
+    end
+    
+    
     private
+    
+    def movie_params
+      params.require(:movie).permit(:title, :description, :category_id, :movie_image)
+    end
 
     def set_movie
       @movie = Movie.friendly.find(params[:id])
     end
-
-    # def fetch_index_data
-    #   @query = Movie.sanitize_sql_like(params[:query].to_s.strip.downcase)
-    #   @page = params[:page] || 1
-    #   @limit = params[:limit] || 4
-    #   @movie = Movie.where('LOWER(movies.title) LIKE ?', "%#{@query}%").order(title: :asc).page(@page).per(@limit)
-    # end
 end

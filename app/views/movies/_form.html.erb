@@ -1,0 +1,7 @@
+<%= simple_form_for @movie do |f|%>
+<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category")%>
+<%= f.input :title, label: "Movie Tite"%>
+<%= f.input :description %>
+<%= f.file_field :movie_image %>
+<%= f.button :submit, class: "btn btn-outline-success mt-2" %>
+<%end%>

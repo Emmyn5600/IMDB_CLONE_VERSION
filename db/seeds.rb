@@ -6,38 +6,52 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-puts "Movies are being created"
+puts "Categories are being created"
 
-movies = Movie.create([
+categories = Category.create([
     {
-        title: "Troll",
-        description: "Best Movie Ever",
-        category: "Action"
+      name: "action"
     },
     {
-        title: "Troll",
-        description: "Best Movie Ever",
-        category: "Action"
+      name: "adventure"
     },
     {
-        title: "Ramayana",
-        description: "The Legend of Prince Rama (1993) 8.5",
-        category: "Romantic"
+      name: "comedy"
     },
     {
-        title: "Once Upon a Time",
-        description: "Once Upon a Time in America 1984",
-        category: "Action"
+      name: "drama"
     },
     {
-        title: "The Loft",
-        description: "Once upon a time in loft 1984",
-        category: "Cool"
-    }
+      name: "fantasy"
+    },
+    {
+      name: "horror"
+    },
+    {
+      name: "musicals"
+    },
+    {
+      name: "mystery"
+    },
+    {
+      name: "romance"
+    },
+    {
+      name: "science"
+    },
+    {
+      name: "fiction"
+    },
+    {
+      name: "sports"
+    },
+    {
+      name: "thriller"
+    },
+    {
+      name: "Western"
+    },
 ])
 
 
-
-
-
-puts "Movies created"
+puts "Categories created"

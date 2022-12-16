@@ -1,14 +1,16 @@
 <h3 class="mt-4 mb-4"><%= section_title%></h3>
 <div class="row">
     <% movies.each do |movie|%>
-    <div class="col-lg-6">
+    <div class="col-lg-3">
         <div class="card shadow mb-3 mt-2">
-            <%= image_tag(movie.image.variant(resize_to_fill: [192, 192]), class: "card-img-top") if movie.image.attached? %>
             <div class="card-body">
-                <h5 class="card-title"><%= movie.title %></h5>
+                <% if movie.movie_image.attached? %>
+                    <%= image_tag movie.movie_image, style: "width: 180px;height:180px;" %>
+                <% end %>
+                <h5 class="card-title mt-2"><%= movie.title %></h5>
                 <p class="lead"><%= truncate(movie.description, length: 50) %></p>
                 <h5>
-                    <span class="badge bg-primary"><%= movie.category%></span>
+                    <span class="badge bg-primary"><%= movie.category.name%></span>
                 </h5>
                 <%= link_to 'View Details', movie, class: "btn btn-success" %>
             </div>

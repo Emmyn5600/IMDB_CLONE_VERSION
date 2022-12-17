@@ -11,9 +11,6 @@
                 <% end %>
                 <h5 class="card-title mt-2"><%= movie.title %></h5>
                 <p class="lead"><%= truncate(movie.description, length: 50) %></p>
-                <h5>
-                    <span class="badge bg-primary"><%= movie.category.name%></span>
-                </h5>
                 <%= link_to 'View Details', movie, class: "btn btn-success" %>
             </div>
         </div>

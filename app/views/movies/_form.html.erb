@@ -1,7 +1,10 @@
 <%= simple_form_for @movie do |f|%>
-<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category")%>
-<%= f.input :title, label: "Movie Tite"%>
+<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category",  class: "form-select form-select-lg mb-3")%>
+<%= f.input :title, label: "Movie Title"%>
 <%= f.input :description %>
 <%= f.file_field :movie_image %>
-<%= f.button :submit, class: "btn btn-outline-success mt-2" %>
+<div class="mt-3">
+    <%= f.button :submit, class: "btn btn-outline-success " %>
+    <%= link_to 'Back', root_path, class: "btn btn-outline-primary"%>
+</div>
 <%end%>

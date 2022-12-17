@@ -1,5 +1,7 @@
 <div class="mt-2 col-lg-12">
-    <%= render 'search'%>
+    <div class="mb-3">
+        <%= render 'search'%>
+    </div>
     <%= render 'shared/movies', movies: @movies, section_title: 'IMDB Movies'%>
     <%= paginate @movies, theme: 'bootstrap-5'%>
 </div>

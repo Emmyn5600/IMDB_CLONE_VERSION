@@ -1,6 +1,6 @@
 <%= search_form_for @q, url: :root do |form| %>
-    <div class="p-5 d-flex ml-2 form-group ">
-        <div class="col-lg-3">
+    <div class="d-flex form-group">
+        <div class="col-lg-6">
             <%= form.label :search_by_title %>
             <%= form.search_field :title_cont, class: "form-control" %>
         </div>
@@ -8,5 +8,4 @@
             <%= form.submit class: "btn btn-primary" %>
         </div>
     </div>
-
     <%end%>

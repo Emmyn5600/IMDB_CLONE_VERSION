@@ -1,6 +1,6 @@
 # IMDB CLONE DEMO 
 
-> IMDB CLONE is a demo for creating a Movie with the following options: image, title, description based on this condition `User should search using title and filter the movie by category` and later a user should search the video [h/she] needs to search to be displayed on screen or it should display no result found if the video doesn't exist.
+> IMDB CLONE is a demo for creating a Movie by an admin with the following options: image, title, description based on this condition `User should search using title and filter the movie by category` and later a user should add a review on a video [h/she] likes on a specific video she/he likes.
 
 ## Features
 

@@ -1,6 +1,6 @@
 # IMDB CLONE DEMO 
 
-> IMDB CLONE is a demo for creating a Movie with the following options: image, title, description based on this condition `User should search using title and filter the movie by category` and later a user should search the video [h/she] needs to search to be displayed on screen or it should display no result found if the video doesn't exist.
+> IMDB CLONE is a demo for creating a Movie by an admin with the following options: image, title, description based on this condition `User should search using title and filter the movie by category` and later a user should add a review on a video [h/she] likes on a specific video she/he likes.
 
 ## Features
 
@@ -31,6 +31,8 @@
 [Live Link](https://immense-garden-27567.herokuapp.com/)
 
 ### Screenshot of the IMDB_CLONE_VERSION
+
+https://user-images.githubusercontent.com/55635977/208506434-4e053ea3-c346-4a63-8f33-ab66b916e6b9.mp4
 
 ### Screenshot of the Homepage
 ![screenshot](app/assets/images/homepage.png)

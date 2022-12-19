@@ -16,7 +16,7 @@
 #     have_select('#Action', :options => ['Action', 'Love', 'Holyhood', 'Comedy'])
 #     fill_in 'Movie Title', with: 'Anything'
 #     fill_in 'Description', with: 'Anything'
-#     # fill_in image { Rack::Test::UploadedFile.new(Rails.root.join('spec/files/images/download.png'), 'image/png') }
+#     attach { Rack::Test::UploadedFile.new(Rails.root.join('spec/files/images/download.png'), 'image/png') }
 #     have_attached_file(:movie_image)
 #     # fill_in 'movie[movie_image]', with: "download.png"
 #     click_on 'Create Movie'

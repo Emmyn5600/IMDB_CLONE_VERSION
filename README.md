@@ -117,6 +117,8 @@ Open `http://localhost:3000/` in your browser.
 
 ```
     bundle exec rspec
+
+    ![screenshot](app/assets/images/test.png)
 ```
 
 👤 **NSABIMANA Emmanuel**

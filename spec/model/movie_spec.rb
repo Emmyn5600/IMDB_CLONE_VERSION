@@ -24,19 +24,3 @@
 #   end
 
 # end
-
-# In rspec, test if the image has been attached using rspec.
-
-# Path: spec/models/movie_spec.rb
-require 'rails_helper'
-
-RSpec.describe Movie, type: :model do
-    it { should have_category_id(:category_id) }
-    it { should have_title(:title) }
-    it { should have_description(:description) }
-  it { should have_attached_file(:movie_image) }
-  it { should validate_attachment_content_type(:movie_image).
-                allowing('image/png', 'image/gif').
-                rejecting('text/plain', 'text/xml') }
-end
-

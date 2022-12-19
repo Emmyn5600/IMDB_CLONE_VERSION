@@ -32,6 +32,8 @@
 
 ### Screenshot of the IMDB_CLONE_VERSION
 
+https://user-images.githubusercontent.com/55635977/208506434-4e053ea3-c346-4a63-8f33-ab66b916e6b9.mp4
+
 ### Screenshot of the Homepage
 ![screenshot](app/assets/images/homepage.png)
 

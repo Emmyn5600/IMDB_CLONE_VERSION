@@ -1,0 +1,11 @@
+<%= search_form_for @q, url: :root do |form| %>
+    <div class="d-flex form-group">
+        <div class="col-lg-6">
+            <%= form.label :search_by_title %>
+            <%= form.search_field :title_cont, class: "form-control" %>
+        </div>
+        <div class="form-group mt-4">
+            <%= form.submit class: "btn btn-primary" %>
+        </div>
+    </div>
+    <%end%>

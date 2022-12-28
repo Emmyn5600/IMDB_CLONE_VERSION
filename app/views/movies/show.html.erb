@@ -1,0 +1,39 @@
+<div class="mt-5 col-lg-8 mt-3">
+    <div class="card shadow mb-3 mt-2">
+        <div class="card-body">
+            <% if @movie.movie_image.attached? %>
+                <%= image_tag @movie.movie_image, style: "width: 180px;height:180px;" %>
+            <% end %>
+            <h5 class="card-title">Title:
+                <%= @movie.title %></h5>
+            <div class="row mt-3">
+                <div class="col-lg-7">
+                    <h5>Category:
+                        <span class="badge bg-primary"><%= @movie.category.name%></span>
+                    </h5>
+                </div>
+                <div class="col-lg-5">
+                    <p class="lead">Description:
+                        <%=@movie.description%>
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <%= render @movie.reviews %>
+                    <div>
+                        <%= link_to "Add Review", new_movie_review_path(@movie), class: "btn btn-outline-success mb-3"%>
+                    </div>
+                </div>
+            </div>
+            <%= link_to 'Back to Movies', root_path, class: "btn btn-outline-danger mb-2"%>
+            <%if user_signed_in? && current_user.role == "admin"  %>
+                <p class="mt-2 fw-bold">Admin Side To Edit/Delete a Movie</p>
+                <%= link_to "Edit", edit_movie_path(@movie), class: "btn btn-outline-primary mb-2" %>
+                <%= link_to "Delete", movie_path(@movie), method: :delete, data:{confirm: "Are you sure!?"}, class: "btn btn-outline-danger mb-2" %>
+                <%end%>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 mt-3"></div>

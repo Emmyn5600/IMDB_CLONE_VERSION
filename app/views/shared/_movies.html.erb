@@ -1,0 +1,19 @@
+<div>
+    <h3 class="d-flex"><%= section_title%></h3>
+</div>
+<div class="row">
+    <% movies.each do |movie|%>
+    <div class="col-lg-3">
+        <div class="card shadow mb-3 mt-2">
+            <div class="card-body">
+                <% if movie.movie_image.attached? %>
+                    <%= image_tag movie.movie_image, style: "width: 180px;height:180px;" %>
+                <% end %>
+                <h5 class="card-title mt-2"><%= movie.title %></h5>
+                <p class="lead"><%= truncate(movie.description, length: 50) %></p>
+                <%= link_to 'View Details', movie, class: "btn btn-success" %>
+            </div>
+        </div>
+    </div>
+    <%end%>
+</div>

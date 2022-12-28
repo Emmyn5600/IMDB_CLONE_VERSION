@@ -5,3 +5,53 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "Categories are being created"
+
+categories = Category.create([
+    {
+      name: "action"
+    },
+    {
+      name: "adventure"
+    },
+    {
+      name: "comedy"
+    },
+    {
+      name: "drama"
+    },
+    {
+      name: "fantasy"
+    },
+    {
+      name: "horror"
+    },
+    {
+      name: "musicals"
+    },
+    {
+      name: "mystery"
+    },
+    {
+      name: "romance"
+    },
+    {
+      name: "science"
+    },
+    {
+      name: "fiction"
+    },
+    {
+      name: "sports"
+    },
+    {
+      name: "thriller"
+    },
+    {
+      name: "Western"
+    },
+])
+
+
+puts "Categories created"

@@ -1,0 +1,7 @@
+<div class="col-lg-12">
+    <h1 class="current-category"><%= params[:category]%></h1>
+    <%if @movies.count == 0 %>
+        <h1>Sorry!! There are no movies currently in this category</h1>
+        <%end%>
+        <%= render 'shared/movies', movies: @movies, section_title:""%>
+    </div>
